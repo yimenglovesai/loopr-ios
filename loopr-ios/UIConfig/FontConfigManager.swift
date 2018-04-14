@@ -39,7 +39,7 @@ class FontConfigManager {
         UITextField.appearance().font = FontConfigManager.shared.getLabelFont()
         
         // Font in the tab bar is 10.
-        let tabBarItemAttributes = [NSAttributedStringKey.font: UIFont(name: FontConfigManager.shared.getCurrentFontName(), size: 10) ?? UIFont.systemFont(ofSize: 10)]
+        let tabBarItemAttributes = [NSFontAttributeName: UIFont(name: FontConfigManager.shared.getCurrentFontName(), size: 10) ?? UIFont.systemFont(ofSize: 10)]
         UITabBarItem.appearance().setTitleTextAttributes(tabBarItemAttributes, for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes(tabBarItemAttributes, for: .selected)
     }

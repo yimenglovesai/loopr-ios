@@ -63,7 +63,7 @@ public struct Address: Hashable, CustomStringConvertible {
 
 extension Address {
     /// Converts the address to an EIP55 checksumed representation.
-    private static func computeEIP55String(for data: Data) -> String {
+    public static func computeEIP55String(for data: Data) -> String {
         let addressString = data.hexString
         let hashInput = addressString.data(using: .ascii)!
         let hash = Data(bytes: SHA3(variant: .keccak256).calculate(for: hashInput.bytes)).hexString

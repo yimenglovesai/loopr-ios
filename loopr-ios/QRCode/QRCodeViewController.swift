@@ -68,7 +68,7 @@ class QRCodeViewController: UIViewController {
         let scaleX = qrcodeImageView.frame.size.width / qrcodeImage.extent.size.width
         let scaleY = qrcodeImageView.frame.size.height / qrcodeImage.extent.size.height
         
-        let transformedImage = qrcodeImage.transformed(by: CGAffineTransform(scaleX: scaleX, y: scaleY))
+        let transformedImage = qrcodeImage.applying(CGAffineTransform(scaleX: scaleX, y: scaleY))
         qrcodeImageView.image = UIImage.init(ciImage: transformedImage)
     }
 

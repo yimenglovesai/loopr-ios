@@ -187,7 +187,7 @@ class ConvertETHViewController: UIViewController, UITextFieldDelegate, NumericKe
 
         // Show toast
         let myString = NSLocalizedString("Convert Successfully.", comment: "")
-        let myAttribute = [NSAttributedStringKey.font: UIFont.init(name: FontConfigManager.shared.getRegular(), size: 17)!]
+        let myAttribute = [NSFontAttributeName: UIFont.init(name: FontConfigManager.shared.getRegular(), size: 17)!]
         let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
         let banner = NotificationBanner(attributedTitle: myAttrString, style: .success)
         banner.duration = 1.0
