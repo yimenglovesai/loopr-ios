@@ -29,10 +29,12 @@ class WalletBalanceTableViewCell: UITableViewCell {
         balanceLabel.textAlignment = NSTextAlignment.center
         balanceLabel.initializeLabel()
         balanceLabel.theme_backgroundColor = GlobalPicker.backgroundColor
+
         let balance = CurrentAppWalletDataManager.shared.getTotalAssetCurrencyFormmat()
-        balanceLabel.setText("\(balance)", animated: true)
+        balanceLabel.setText("\(balance)", animated: false)
 
         hideAssetSwitch.transform = CGAffineTransform(scaleX: 0.65, y: 0.65)
+        hideAssetSwitch.setOn(SettingDataManager.shared.getHideSmallAssets(), animated: false)
 
         self.theme_backgroundColor = GlobalPicker.backgroundColor
         
@@ -62,8 +64,10 @@ class WalletBalanceTableViewCell: UITableViewCell {
     
     @objc func updateBalance() {
         let balance = CurrentAppWalletDataManager.shared.getTotalAssetCurrencyFormmat()
-        balanceLabel.setText("\(balance)", animated: true)
-        layoutIfNeeded()
+        if balance != balanceLabel.text {
+            balanceLabel.setText(balance, animated: true)
+            layoutIfNeeded()
+        }
     }
 
     // The add button has been removed. However, we may still put it back in the future. Keep the code.
@@ -78,8 +82,9 @@ class WalletBalanceTableViewCell: UITableViewCell {
         } else {
             print ("toggleHideAssetSwitch OFF")
         }
+        SettingDataManager.shared.setHideSmallAssets(hideAssetSwitch.isOn)
     }
-    
+
     class func getCellIdentifier() -> String {
         return "WalletBalanceTableViewCell"
     }
