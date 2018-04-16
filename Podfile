@@ -15,6 +15,7 @@ target 'loopr-ios' do
   pod 'FontBlaster'
   pod 'Socket.IO-Client-Swift', '~> 13.1.0'
   pod 'NotificationBannerSwift'
+  pod 'QRCodeReader.swift', '~> 8.1.1'
   
   # Pods for keystone
   pod 'Geth'

@@ -16,6 +16,7 @@ PODS:
   - pop (1.0.10)
   - PopupDialog (0.7.1):
     - DynamicBlurView (~> 2.0)
+  - QRCodeReader.swift (8.1.1)
   - secp256k1_ios (0.1.2)
   - SipHash (1.2.0)
   - SnapKit (4.0.0)
@@ -36,11 +37,34 @@ DEPENDENCIES:
   - NotificationBannerSwift
   - pop
   - PopupDialog
+  - QRCodeReader.swift (~> 8.1.1)
   - secp256k1_ios (from `https://github.com/shamatar/secp256k1_ios.git`)
   - Socket.IO-Client-Swift (~> 13.1.0)
   - SwiftLint
   - SwiftTheme
   - TrezorCrypto
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - BigInt
+    - Charts
+    - CryptoSwift
+    - DynamicBlurView
+    - FontBlaster
+    - Geth
+    - lottie-ios
+    - MarqueeLabel
+    - NotificationBannerSwift
+    - pop
+    - PopupDialog
+    - QRCodeReader.swift
+    - SipHash
+    - SnapKit
+    - Socket.IO-Client-Swift
+    - Starscream
+    - SwiftLint
+    - SwiftTheme
+    - TrezorCrypto
 
 EXTERNAL SOURCES:
   secp256k1_ios:
@@ -63,6 +87,7 @@ SPEC CHECKSUMS:
   NotificationBannerSwift: 4eceb2add9d5eaa0596c63d49690b4d6476e74ec
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
+  QRCodeReader.swift: b164a681887de276d405ff02bce854d82cd6360b
   secp256k1_ios: 168c6c49ed9771db51875f5255c8f9847e4cf554
   SipHash: c6e9e43e9c531b5bc6602545130c26194a6d31ce
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
@@ -72,6 +97,6 @@ SPEC CHECKSUMS:
   SwiftTheme: 36d71c4eed4b2c401c782cf036e4586c749a8173
   TrezorCrypto: 7f87a2296cf13872b21565c29fd9f7882dd00803
 
-PODFILE CHECKSUM: 0c38db8c107077edcde896ce5f4ef62dbefad9c0
+PODFILE CHECKSUM: 93166fd8d59f4fcbd8d1fd58de453143e7b3f02e
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
