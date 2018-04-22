@@ -1441,6 +1441,7 @@
 		AC798E412022B93A0071D477 /* loopr-ios */ = {
 			isa = PBXGroup;
 			children = (
+				FF6E41F4208D513C0063A348 /* Authentication */,
 				ACCC7EA120828D2E008E58BA /* loopr-ios-sdk */,
 				94B828CD206A06A8002AB470 /* Utils */,
 				AC798E422022B93A0071D477 /* AppDelegate.swift */,
@@ -1891,6 +1892,13 @@
 				AC3756752038D70D00AADC60 /* UnlockWallet */,
 			);
 			path = Setup;
+			sourceTree = "<group>";
+		};
+		FF6E41F4208D513C0063A348 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
